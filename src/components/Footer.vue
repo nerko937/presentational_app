@@ -32,12 +32,12 @@
 .footer
   +center
   flex-shrink: 0
-  background-color: $background-color
+  background-color: $color-background
 
 .footer-row
   line-height: 1.8rem
   font-size: small
-  color: $secondary-color
+  color: $color-primary
   font-family: Times, "Times New Roman", serif
 
 @media (max-width: $breakpoint-phone)
