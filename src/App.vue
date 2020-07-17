@@ -1,10 +1,12 @@
 <template>
   <div id="app">
+    <Main/>
     <Footer/>
-      </div>
+  </div>
 </template>
 
 <script>
+import Main from '@/components/main/Main.vue'
 import Footer from '@/components/Footer.vue'
 export default {
   name: 'App',
