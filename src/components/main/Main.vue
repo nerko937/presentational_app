@@ -58,8 +58,6 @@ main
     background: $color-background
     flex-grow: 1
     height: 3rem
-    margin-bottom: $tab-underline-height
-    padding-top: $tab-underline-height
     font-size: large
     font-weight: bold
     font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif
@@ -78,15 +76,11 @@ main
     
     &--selected
       color: $color-primary !important
-      background: $color-background !important
-      transition: all $selected-transition-timeout
-
-      // underline
-      &:after
-        background-color: $color-primary
-        transition: background-color $selected-transition-timeout
+      transition: color $selected-transition-timeout
 
     // animated underline
+    margin-bottom: $tab-underline-height
+    padding-top: $tab-underline-height
     position: relative
 
     &:after, &:before
@@ -112,6 +106,11 @@ main
         transform: scaleX(1)
         transition-duration: 150ms
     
+    &--selected
+      &:after
+        background-color: $color-primary
+        transition: background-color $selected-transition-timeout
+    
     // animated background on hover
     @each $keyframe-name in $animation-in-name, $animation-out-name
       @keyframes #{$keyframe-name}
@@ -129,5 +128,8 @@ main
           animation-fill-mode: forwards
           animation-name: $animation-in-name,
           animation-direction: normal
+    
+    &--selected
+      background: $color-background !important
 
 </style>
