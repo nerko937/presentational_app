@@ -77,13 +77,16 @@ main
     
     &--selected
       color: $color-primary !important
-      background: $color-background !important
+      background: $color-background !important // this important
+      // disables keyframes o previously selected tab
+      transition: all $selected-transition-timeout // triggers when selected class applies
 
-    // animated underline
-    margin-bottom: $tab-underline-height
-    padding-top: $tab-underline-height
+    // tab underline styles
+    margin-bottom: $tab-underline-height // prevents tab to go into subjacent container
+    padding-top: $tab-underline-height // moves text into center
     position: relative
 
+    // basic underline
     &:after, &:before
       content: ''
       display: block
@@ -94,7 +97,11 @@ main
 
     &:before
       background-color: $default-tab-color
+    
+    &--selected:after
+      background-color: $color-primary
 
+    // underline animations
     &:not(&--selected)
       &:after
         transition-property: transform
@@ -107,9 +114,7 @@ main
         transform: scaleX(1)
         transition-duration: 150ms
     
-    &--selected
-      &:after
-        background-color: $color-primary
+    &--selected:after
         transition: background-color $selected-transition-timeout
     
     // animated background on hover
@@ -123,14 +128,9 @@ main
     animation-duration: 200ms
     animation-direction: reverse
     
-    &:not(&--selected)
-      &:hover
-          cursor: pointer
-          animation-fill-mode: forwards
-          animation-name: $animation-in-name,
-          animation-direction: normal
-    
-    &--selected
-      background: $color-background !important
+    &:not(&--selected):hover
+      animation-fill-mode: forwards
+      animation-name: $animation-in-name,
+      animation-direction: normal
 
 </style>
