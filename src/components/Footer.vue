@@ -52,18 +52,18 @@
   &__row
     line-height: 1.8rem
     font-size: small
-    color: $color-primary
+    color: $color-secondary
     font-family: Times, "Times New Roman", serif
   
   &__divider
+    background-color: #424242
+    
     @media (max-width: $breakpoint-phone)
       height: 1px
-      background-color: #616161
       width: 80%
 
     @media (min-width: $breakpoint-phone)
       width: 1px
-      background-color: #616161
       height: 80%
 
 .example-col
