@@ -38,7 +38,15 @@
 
 main
   flex: 1 0 auto
-  margin: 10%
+  
+  @media (min-width: $breakpoint-tablet)
+    margin: 5% 12%
+  
+  @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-laptop)
+    margin: 5%
+  
+  @media (max-width: $breakpoint-phone)
+    margin-bottom: 5%
 
 .tabs
   display: flex
