@@ -51,11 +51,12 @@ main
     $animation-in-name: hover-in
     $animation-out-name: hover-out
     $selected-transition-timeout: 250ms
+    $default-tab-color: #222222
 
     // styles
     +center
     color: $color-secondary
-    background: $color-background
+    background: $default-tab-color
     flex-grow: 1
     height: 3rem
     font-size: large
@@ -76,7 +77,7 @@ main
     
     &--selected
       color: $color-primary !important
-      transition: color $selected-transition-timeout
+      background: $color-background !important
 
     // animated underline
     margin-bottom: $tab-underline-height
@@ -92,7 +93,7 @@ main
       position: absolute
 
     &:before
-      background-color: $color-background
+      background-color: $default-tab-color
 
     &:not(&--selected)
       &:after
@@ -116,7 +117,7 @@ main
       @keyframes #{$keyframe-name}
         @for $i from 0 through 10
           #{$i * 10%}
-            background: radial-gradient(circle at bottom, #2a2a2a $i * 10%, $color-background $i * 10%)
+            background: radial-gradient(circle at bottom, #2a2a2a $i * 10%, $default-tab-color $i * 10%)
 
     animation-name: $animation-out-name,
     animation-duration: 200ms
