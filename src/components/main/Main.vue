@@ -10,12 +10,24 @@
       ><span>{{ item }}</span></div>
     </div>
 
-    <div id="temp"/>
+    <div id="main-container">
+      <component
+        v-for="(item, i) in tabItems"
+        :key="i"
+        :is="item"
+        v-show="i === selected"
+      />
+    </div>
   </main>
 </template>
 
 <script>
+  import Home from "./Home.vue"
+  import About from "./About.vue"
   export default {
+    components: {
+      Home, About
+    },
     data() {
       return {
         tabItems: ['Home', 'About', 'Contact', 'Products'],
@@ -26,9 +38,8 @@
 </script>
 
 <style lang="sass" scoped>
-#temp
+#main-container
   width: 100%
-  height: 20rem
   background-color: $color-background
 
 main
