@@ -5,7 +5,7 @@
         v-for="(item, i) in tabItems"
         :key="i"
         class="tabs__item"
-        :class="isSelected(i)"
+        :class="{ 'tabs__item--selected': i === selected }"
         @click="selected = i"
       ><span>{{ item }}</span></div>
     </div>
@@ -20,11 +20,6 @@
       return {
         tabItems: ['Home', 'About', 'Contact', 'Products'],
         selected: 0
-      }
-    },
-    methods: {
-      isSelected(index) {
-        return index === this.selected ? 'tabs__item--selected' : ''
       }
     },
   }
