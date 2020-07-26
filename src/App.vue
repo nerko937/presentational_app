@@ -27,6 +27,7 @@ body
 #app
   display: flex
   flex-direction: column
+  font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif
 
 a
   text-decoration: none

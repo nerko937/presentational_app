@@ -53,7 +53,6 @@
     line-height: 1.8rem
     font-size: small
     color: $color-secondary
-    font-family: Times, "Times New Roman", serif
   
   &__divider
     background-color: #424242

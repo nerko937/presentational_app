@@ -75,7 +75,6 @@ main
     height: 3rem
     font-size: large
     font-weight: bold
-    font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif
 
     &:first-child
       margin-right: $tabs-gap
