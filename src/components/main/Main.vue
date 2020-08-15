@@ -39,8 +39,13 @@
 
 <style lang="sass" scoped>
 #main-container
-  width: 100%
   background-color: $color-background
+
+  @media (min-width: $breakpoint-phone)
+    padding: 2rem
+  
+  @media (max-width: $breakpoint-phone)
+    padding: 2rem 0
 
 main
   flex: 1 0 auto
