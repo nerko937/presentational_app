@@ -22,6 +22,7 @@ html, body, #app
 
 body
   background-image: url('./assets/background.jpg')
+  background-size: initial
   margin: 0
 
 #app
