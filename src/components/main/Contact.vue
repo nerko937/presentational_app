@@ -45,6 +45,7 @@
     height: auto
     max-width: 95%
     margin: auto
+    +shadow-soft
     @media (min-width: $breakpoint-desktop)
       parring-right: 2rem
 

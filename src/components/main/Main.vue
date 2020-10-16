@@ -53,6 +53,7 @@
 main
   flex: 1 0 auto
   color: $color-secondary
+  +shadow-soft
   
   @media (min-width: $breakpoint-tablet)
     margin: 5% 12%

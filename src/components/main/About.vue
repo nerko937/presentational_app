@@ -60,6 +60,7 @@
   overflow: hidden
 
   &__image
+    +shadow-soft
     @media (max-width: $breakpoint-tablet)
       height: auto
       max-width: 95%

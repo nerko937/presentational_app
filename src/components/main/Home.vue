@@ -52,6 +52,7 @@ export default {
 <style lang="sass" scoped>
 #carousel
   margin: 1rem 2rem
+  +shadow-soft
 
 .slide
   height: 35rem
