@@ -17,7 +17,9 @@
         <div class="header">
           <img src="@/assets/logo.png" class="header__image"/>
         </div>
-        <component :is="selected"/>
+        <transition name="slide" mode="out-in">
+          <component :is="selected"/>
+        </transition>
       </div>
     </main>
   </transition>
@@ -46,6 +48,15 @@
   transition: all 1.5s
 .appear-enter
   opacity: 0
+  transform: translateY(50px)
+
+.slide-enter-active, .slide-leave-active
+  transition: all .3s
+.slide-enter, .slide-leave-to
+  opacity: 0
+.slide-enter
+  transform: translateY(-50px)
+.slide-leave-to
   transform: translateY(50px)
 
 main
