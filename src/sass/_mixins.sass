@@ -7,3 +7,13 @@
   -webkit-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.20)
   -moz-box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.20)
   box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.20)
+
+=transition-animations($name, $time: .7s, $translate-direction: X, $translate-arg: 50px)
+  .#{$name}-enter-active, .#{$name}-leave-active
+    transition: all $time
+  .#{$name}-enter, .#{$name}-leave-to
+    opacity: 0
+  .#{$name}-enter
+    transform: translate#{$translate-direction}($translate-arg)
+  .#{$name}-leave-to
+    transform: translate#{$translate-direction}(-$translate-arg)

@@ -44,20 +44,7 @@
 </script>
 
 <style lang="sass" scoped>
-.appear-enter-active
-  transition: all 1.5s
-.appear-enter
-  opacity: 0
-  transform: translateY(50px)
-
-.slide-enter-active, .slide-leave-active
-  transition: all .3s
-.slide-enter, .slide-leave-to
-  opacity: 0
-.slide-enter
-  transform: translateY(-50px)
-.slide-leave-to
-  transform: translateY(50px)
++transition-animations(appear, 1.5s, Y)
 
 main
   flex: 1 0 auto
@@ -177,5 +164,7 @@ main
   +center
   &__image
     margin-bottom: 0.5rem
+
++transition-animations(slide, .3s, Y, -50px)
 
 </style>

@@ -104,14 +104,6 @@
     height: auto
     max-width: 100%
 
-// transition animations
-.slide-enter-active, .slide-leave-active
-  transition: all .7s
-.slide-enter, .slide-leave-to
-  opacity: 0
-.slide-enter
-  transform: translateX(200px)
-.slide-leave-to
-  transform: translateX(-200px)
++transition-animations(slide, $translate-arg: 200px)
   
 </style>
