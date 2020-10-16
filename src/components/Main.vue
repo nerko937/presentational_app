@@ -1,24 +1,26 @@
 <template>
-  <main>
-    <div class="tabs">
-      <div
-        v-for="item in tabItems"
-        :key="item"
-        class="tabs__item"
-        :class="{ 'tabs__item--selected': item === selected }"
-        @click="selected = item"
-      >
-        <span>{{ item }}</span>
+  <transition appear name="appear">
+    <main>
+      <div class="tabs">
+        <div
+          v-for="item in tabItems"
+          :key="item"
+          class="tabs__item"
+          :class="{ 'tabs__item--selected': item === selected }"
+          @click="selected = item"
+        >
+          <span>{{ item }}</span>
+        </div>
       </div>
-    </div>
 
-    <div id="main-container">
-      <div class="header">
-        <img src="@/assets/logo.png" class="header__image"/>
+      <div id="main-container">
+        <div class="header">
+          <img src="@/assets/logo.png" class="header__image"/>
+        </div>
+        <component :is="selected"/>
       </div>
-      <component :is="selected"/>
-    </div>
-  </main>
+    </main>
+  </transition>
 </template>
 
 <script>
@@ -40,13 +42,11 @@
 </script>
 
 <style lang="sass" scoped>
-#main-container
-  background-color: $color-background
-  @media (min-width: $breakpoint-phone)
-    padding: 2rem
-  
-  @media (max-width: $breakpoint-phone)
-    padding: 2rem 0
+.appear-enter-active
+  transition: all 1.5s
+.appear-enter
+  opacity: 0
+  transform: translateY(50px)
 
 main
   flex: 1 0 auto
@@ -61,6 +61,14 @@ main
   
   @media (max-width: $breakpoint-phone)
     margin-bottom: 5%
+
+#main-container
+  background-color: $color-background
+  @media (min-width: $breakpoint-phone)
+    padding: 2rem
+  
+  @media (max-width: $breakpoint-phone)
+    padding: 2rem 0
 
 .tabs
   display: flex
