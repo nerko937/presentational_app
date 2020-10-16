@@ -27,9 +27,10 @@
 <script>
   import Home from "./Home.vue"
   import About from "./About.vue"
+  import Contact from "./Contact.vue"
   export default {
     components: {
-      Home, About
+      Home, About, Contact
     },
     data() {
       return {
@@ -43,7 +44,6 @@
 <style lang="sass" scoped>
 #main-container
   background-color: $color-background
-
   @media (min-width: $breakpoint-phone)
     padding: 2rem
   
