@@ -12,7 +12,7 @@
 
     <div id="main-container">
       <div class="header">
-        <img src="../../assets/logo.png" class="header__image"/>
+        <img src="@/assets/logo.png" class="header__image"/>
       </div>
       <component
         v-for="(item, i) in tabItems"
@@ -25,10 +25,10 @@
 </template>
 
 <script>
-  import Home from "./Home.vue"
-  import About from "./About.vue"
-  import Contact from "./Contact.vue"
-  import Products from "./Products.vue"
+  import Home from "./Main/Home"
+  import About from "./Main/About"
+  import Contact from "./Main/Contact"
+  import Products from "./Main/Products"
   export default {
     components: {
       Home, About, Contact, Products

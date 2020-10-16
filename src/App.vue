@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Main from '@/components/main/Main.vue'
+import Main from '@/components/Main.vue'
 import Footer from '@/components/Footer.vue'
 export default {
   name: 'App',
