@@ -11,6 +11,9 @@
     </div>
 
     <div id="main-container">
+      <div class="header">
+        <img src="../../assets/logo.png" class="header__image"/>
+      </div>
       <component
         v-for="(item, i) in tabItems"
         :key="i"
@@ -150,5 +153,11 @@ main
       animation-fill-mode: forwards
       animation-name: $animation-in-name,
       animation-direction: normal
+
+.header
+  width: 100%
+  +center
+  &__image
+    margin-bottom: 0.5rem
 
 </style>
