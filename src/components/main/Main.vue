@@ -28,9 +28,10 @@
   import Home from "./Home.vue"
   import About from "./About.vue"
   import Contact from "./Contact.vue"
+  import Products from "./Products.vue"
   export default {
     components: {
-      Home, About, Contact
+      Home, About, Contact, Products
     },
     data() {
       return {
@@ -75,12 +76,11 @@ main
     $animation-in-name: hover-in
     $animation-out-name: hover-out
     $selected-transition-timeout: 250ms
-    $default-tab-color: #222222
 
     // styles
     +center
     color: $color-secondary
-    background: $default-tab-color
+    background: $color-background-secondary
     flex-grow: 1
     height: 3rem
     font-size: large
@@ -119,7 +119,7 @@ main
       position: absolute
 
     &:before
-      background-color: $default-tab-color
+      background-color: $color-background-secondary
     
     &--selected:after
       background-color: $color-primary
@@ -145,7 +145,7 @@ main
       @keyframes #{$keyframe-name}
         @for $i from 0 through 10
           #{$i * 10%}
-            background: radial-gradient(circle at bottom, #2a2a2a $i * 10%, $default-tab-color $i * 10%)
+            background: radial-gradient(circle at bottom, #2a2a2a $i * 10%, $color-background-secondary $i * 10%)
 
     animation-name: $animation-out-name,
     animation-duration: 200ms
