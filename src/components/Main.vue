@@ -2,24 +2,21 @@
   <main>
     <div class="tabs">
       <div
-        v-for="(item, i) in tabItems"
-        :key="i"
+        v-for="item in tabItems"
+        :key="item"
         class="tabs__item"
-        :class="{ 'tabs__item--selected': i === selected }"
-        @click="selected = i"
-      ><span>{{ item }}</span></div>
+        :class="{ 'tabs__item--selected': item === selected }"
+        @click="selected = item"
+      >
+        <span>{{ item }}</span>
+      </div>
     </div>
 
     <div id="main-container">
       <div class="header">
         <img src="@/assets/logo.png" class="header__image"/>
       </div>
-      <component
-        v-for="(item, i) in tabItems"
-        :key="i"
-        :is="item"
-        v-show="i === selected"
-      />
+      <component :is="selected"/>
     </div>
   </main>
 </template>
@@ -36,7 +33,7 @@
     data() {
       return {
         tabItems: ['Home', 'About', 'Contact', 'Products'],
-        selected: 0
+        selected: 'Home'
       }
     },
   }
