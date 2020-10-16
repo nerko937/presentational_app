@@ -21,8 +21,7 @@ html, body, #app
   height: 100%
 
 body
-  background-image: url('./assets/background.jpg')
-  background-size: initial
+  background-image: url('./assets/background.png')
   margin: 0
 
 #app
