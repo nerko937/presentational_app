@@ -85,6 +85,7 @@ main
     color: $color-secondary
     background: $color-background-secondary
     flex-grow: 1
+    flex-basis: 0
     height: 3rem
     font-size: large
     font-weight: bold
